@@ -95,12 +95,14 @@ void Handle_Disabled_State()
 
 void Process_Remote_Input()
 {
-    // USER CODE HERE
+    g_robot_state.chassis.x_speed = MAX_SPEED * (g_remote.controller.left_stick.x / REMOTE_STICK_MAX);
+    g_robot_state.chassis.y_speed = MAX_SPEED * (g_remote.controller.left_stick.y / REMOTE_STICK_MAX);
+    g_robot_state.chassis.omega = MAX_ROT * 0.0;
 }
 
 void Process_Chassis_Control()
 {
-     // USER CODE HERE
+    Chassis_Ctrl_Loop();
 }
 
 void Process_Gimbal_Control()
