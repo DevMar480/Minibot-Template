@@ -80,7 +80,7 @@ void Chassis_Task_Init()
 
 void Chassis_Ctrl_Loop()
 {
-    wheel_speeds = calc_wheel_speeds(g_robot_state.chassis.x_speed, g_robot_state.chassis.y_speed, g_robot_state.chassis.omega);
+    calc_wheel_speeds(&wheel_speeds, g_robot_state.chassis.x_speed, g_robot_state.chassis.y_speed, g_robot_state.chassis.omega);
     DJI_Motor_Set_Velocity(motor_w1, wheel_speeds.wheel_one);
     DJI_Motor_Set_Velocity(motor_w2, wheel_speeds.wheel_two);
     DJI_Motor_Set_Velocity(motor_w3, wheel_speeds.wheel_three);
