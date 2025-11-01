@@ -1,7 +1,7 @@
 #ifndef CHASSIS_TASK_H
 #define CHASSIS_TASK_H
 
-#define MAX_SPEED 1
+#define MAX_SPEED 500
 #define MAX_ROT 1
 
 // Function prototypes
