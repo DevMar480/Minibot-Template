@@ -13,6 +13,6 @@ typedef struct wheel_speeds_s {
     float wheel_four;
 } wheel_speeds_t;
 
-wheel_speeds_t calc_wheel_speeds(float vx, float vy, float vomega);
+void calc_wheel_speeds(wheel_speeds_t* speeds, float vx, float vy, float vomega);
 
 #endif // WHEEL_SPEED_H
